@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title> JnC Bike Shop | About Us</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <style>
+            .row {
+              display: -ms-flexbox; /* IE10 */
+              display: flex;
+              -ms-flex-wrap: wrap; /* IE10 */
+              flex-wrap: wrap;
+              margin: 0 -16px;
+            }
+            
+            .col-25 {
+              -ms-flex: 25%; /* IE10 */
+              flex: 25%;
+            }
+            
+            .col-50 {
+              -ms-flex: 50%; /* IE10 */
+              flex: 50%;
+            }
+            
+            .col-75 {
+              -ms-flex: 75%; /* IE10 */
+              flex: 75%;
+            }
+            
+            .col-25,
+            .col-50,
+            .col-75 {
+              padding: 0 16px;
+            }
+            
+            .container-check {
+              background-color: #f2f2f2;
+              padding: 20px 20px 15px 20px;
+              border: 1px solid lightgrey;
+              border-radius: 3px;
+              margin:2.5%;
+
+    
+              justify-content: center;
+              align-items:center;
+            }
+            
+            input[type=text] {
+              width: 100%;
+              margin-bottom: 20px;
+              padding: 12px;
+              border: 1px solid #ccc;
+              border-radius: 3px;
+            }
+            
+            label {
+              margin-bottom: 10px;
+              display: block;
+            }
+            
+            .icon-container {
+              margin-bottom: 20px;
+              padding: 7px 0;
+              font-size: 24px;
+            }
+            
+            .btn {
+              background-color: #ff5252;
+              color: white;
+              padding: 12px;
+              margin: 10px 0;
+              border: none;
+              width: 100%;
+              border-radius: 3px;
+              cursor: pointer;
+              font-size: 17px;
+            }
+            
+            .btn:hover {
+              background-color: red;
+            }
+            
+            span.price {
+              float: right;
+              color: grey;
+            }
+    
+            .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+        }
+            </style>
+
+        
+    </head>
+
+    <body>
+
+        <div class="preloader">
+            <img class="load-logo"src="loading-wheel.gif" alt="">
+        </div>
+
+        <header>
+            <img class="logo" src="jnc-logo.png" alt="JnC Bikeshop">
+             <nav> 
+                 <ul class="navbuttons">
+                     <li> <a href = "homepage.html" >HOME</a></li>
+                     <li> <a href = "products.html" class="productbttn">PRODUCTS ⏷</a>
+                         <ul class="dropdown">
+                             <li> <a href = "products-mountainbikes.html">MTB</a></li>
+                             <li> <a href = "products-roadbikes.html">RoadBike</a></li>
+                             <li> <a href = "products-bikeparts.html">Bike Parts</a></li>
+                             <li> <a href = "products-bikeaccessories.html">Bike Accessories</a></li>
+                         </ul>
+                     </li>
+                     <li> <a href = "aboutus.html" >ABOUT US</a></li>
+                     <li> <a href = "customer-service.html" >CONTACTS</a></li>
+                 </ul>
+             </nav>
+    
+             <div class="side-buttons">
+    
+                 <!-- Add to Cart Button -->
+                 <div class="cart-cont">
+                    <div class="cart-icons">
+                        <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                        <div class="cart">
+                            <h2 class="cart-title">Your Cart</h2>
+                            <div class="cart-content">
+                                
+                            
+                            </div>
+                            <!-- Total -->
+                            <div class="total">
+                                <div class="total-title">Total</div>
+                                <div class="total-price">₱0</div>
+                            </div>
+                            <!-- Buy Button -->
+                            <button type="button" class="btn-buy">Check Out</button>
+                            <!-- Cart Close -->
+                            <i class="fa-solid fa-x" id="close-cart"></i>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Dark Mode Button -->
+                <div>
+                    <input type="checkbox"
+                class="checkbox" id="checkbox">
+                    <label for="checkbox" class="label">
+                        <i class="fas fa-moon"> </i>
+                        <i class="fas fa-sun"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
+    
+             </div>
+    
+         </header>
+
+         <div class="col-75">
+            <div class="container-check">
+        
+                <div class="row">
+                  <div class="col-50">
+                    <h3>Billing Address</h3>
+                    <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Christian Jericho M. San Agustin">
+                    <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                    <input type="text" id="email" name="email" placeholder="christian@example.com">
+                    <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                    <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                    <label for="city"><i class="fa fa-institution"></i> City</label>
+                    <input type="text" id="city" name="city" placeholder="Silang">
+        
+                    <div class="row">
+                      <div class="col-50">
+                        <label for="state">Province</label>
+                        <input type="text" id="state" name="state" placeholder="Cavite">
+                      </div>
+                      <div class="col-50">
+                        <label for="zip">Zip</label>
+                        <input type="text" id="zip" name="zip" placeholder="4118">
+                      </div>
+                    </div>
+                  </div>
+        
+                  <div class="col-50">
+                    <h3>Payment</h3>
+                    <label for="fname">Accepted Cards</label>
+                    <div class="icon-container">
+                      <i class="fa fa-cc-visa" style="color:navy;"></i>
+                      <i class="fa fa-cc-amex" style="color:blue;"></i>
+                      <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                      <i class="fa fa-cc-discover" style="color:orange;"></i>
+                    </div>
+                    <label for="cname">Name on Card</label>
+                    <input type="text" id="cname" name="cardname" placeholder="Jeydee Sagayno">
+                    <label for="ccnum">Credit card number</label>
+                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                    <label for="expmonth">Exp Month</label>
+                    <input type="text" id="expmonth" name="expmonth" placeholder="September">
+        
+                    <div class="row">
+                      <div class="col-50">
+                        <label for="expyear">Exp Year</label>
+                        <input type="text" id="expyear" name="expyear" placeholder="2025">
+                      </div>
+                      <div class="col-50">
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="352">
+                      </div>
+                    </div>
+                  </div>
+        
+                </div>
+                <label>
+                 Shipping address same as billing
+                </label>
+                <input type="submit" value="Continue to checkout" class="btn" id="checkoutBtn">
+            </div>
+          </div>
+
+          <div class="popup" id="popup">
+            <p>Orders Confirmed</p>
+            <img style="margin-top:50px;" src="check-img.png" class="check-img">
+            <a href="homepage.html" style="margin-left:130px;"><button class="submit-btn">Go Back</button></a>   
+          </div>
+
+        <script src="javascript.js"></script>
+        <script>
+           document.getElementById('checkoutBtn').addEventListener('click', function() {
+  var fname = document.getElementById('fname').value;
+  var email = document.getElementById('email').value;
+  var adr = document.getElementById('adr').value;
+  var city = document.getElementById('city').value;
+  var state = document.getElementById('state').value;
+  var zip = document.getElementById('zip').value;
+  var cname = document.getElementById('cname').value;
+  var ccnum = document.getElementById('ccnum').value;
+  var expmonth = document.getElementById('expmonth').value;
+  var expyear = document.getElementById('expyear').value;
+  var cvv = document.getElementById('cvv').value;
+
+  // Check if any of the fields are empty
+  if (
+    fname === '' || 
+    email === '' ||
+    adr === '' ||
+    city === '' ||
+    state === '' ||
+    zip === '' ||
+    cname === '' ||
+    ccnum === '' ||
+    expmonth === '' ||
+    expyear === '' ||
+    cvv === ''
+  ) {
+    alert('Please fill out all the fields before continuing to checkout.');
+    return; // Stop execution if the form is not completely filled
+  }
+
+  var popup = document.getElementById('popup');
+  popup.style.display = 'block';
+  cartItems = []; //removes cart items
+  updateCartUI();
+  // Close the popup after 3 seconds (optional)
+  setTimeout(function() {
+    popup.style.display = 'none';
+  }, 3000);
+});
+          </script>
+          
+        <footer> 
+            <div class="row">
+                <div class="col">
+                    <img src="jnc-logo.png" alt="" class="foot-logo">
+                    <p>JnC Bikeshope is a premier bike shop specializing in the sale of bicycles from various well-known brands, as well as a wide range of bike parts and accessories. Located in Silang, Cavite, our shop caters to biking enthusiasts of all levels, from beginners to seasoned riders.</p>
+                </div>
+                
+                <div class="col">
+                    <h3>SHOP</h3>
+                    <p>ABB Bldg. 2F</p>
+                    <p>7XHV+QG5, Silang, Cavite</p>
+                    <p>Philippines</p>
+                    <p class="email-id">JnCbikeshop@gmail.com</p>
+                    <h4>+63 - 9447557385</h4> 
+                    </div>
+        
+                    <div class="col">
+                        <h3>PRODUCTS</h3>
+                        <ul>
+                            <li><a href="products-mountainbikes.html">Mountain Bikes</a></li>
+                            <li><a href="products-roadbikes.html">Road Bikes</a></li>
+                            <li><a href="products-bikeparts.html">Bike Parts</a></li>
+                            <li><a href="products-bikeaccessories.html">Bike Accessories</a></li>
+                        </ul>
+                    </div>
+        
+                <div class="col">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="aboutus.html" class="abtfoot">About Us</a></li>
+                    </ul>
+        
+                </div>
+        
+            </div>
+        
+            <hr>
+            <p class="copyright"> JnC Bikeshope © 2023 - All Rights Reserved</p>
+        </footer>
+    </body>
+</html>

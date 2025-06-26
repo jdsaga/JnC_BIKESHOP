@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title> JnC Bike Shop | Pedals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+</head>
+
+<body>
+
+    <!-- Loading Screen -->
+    <div class="preloader">
+        <img class="load-logo"src="loading-wheel.gif" alt="">
+    </div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <img class="logo" src="jnc-logo.png" alt="JnC Bikeshop">
+         <nav> 
+             <ul class="navbuttons">
+                 <li> <a href = "homepage.html" >HOME</a></li>
+                 <li> <a href = "products.html" class="productbttn">PRODUCTS ⏷</a>
+                     <ul class="dropdown">
+                         <li> <a href = "products-mountainbikes.html">MTB</a></li>
+                         <li> <a href = "products-roadbikes.html">RoadBike</a></li>
+                         <li> <a href = "products-bikeparts.html">Bike Parts</a></li>
+                         <li> <a href = "products-bikeaccessories.html">Bike Accessories</a></li>
+                     </ul>
+                 </li>
+                 <li> <a href = "aboutus.html" >ABOUT US</a></li>
+                 <li> <a href = "customer-service.html" >CONTACTS</a></li>
+             </ul>
+         </nav>
+
+         <div class="side-buttons">
+
+             <!-- Add to Cart Button -->
+             <div class="cart-cont">
+                <div class="cart-icons">
+                    <i class="fa-solid fa-cart-shopping" id="cart-icon"></i>
+                    <div class="cart">
+                        <h2 class="cart-title">Your Cart</h2>
+                        <div class="cart-content">
+                            
+                        
+                        </div>
+                        <!-- Total -->
+                        <div class="total">
+                            <div class="total-title">Total</div>
+                            <div class="total-price">₱0</div>
+                        </div>
+                        <!-- Buy Button -->
+                        <button type="button" class="btn-buy">Check Out</button>
+                        <!-- Cart Close -->
+                        <i class="fa-solid fa-x" id="close-cart"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dark Mode Button -->
+            <div>
+                <input type="checkbox"
+            class="checkbox" id="checkbox">
+                <label for="checkbox" class="label">
+                    <i class="fas fa-moon"> </i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+            </div>
+
+         </div>
+
+     </header>
+
+     
+
+
+     <div class="page-container">
+
+        <div class="productpg-image">
+            <img src="BIKE PARTS.png" alt="" class="product-imgpg">
+        </div>
+
+        <div class="category-container">
+            <div class="sidebar">
+                <h1>Product <br> Categories</h1>
+                <div class="filter">
+                    <h3>Category Filter</h3>
+                    
+                    
+
+                    <div class="btns">
+
+                        <button style="text-align: center;"class="fil-p"> <a href="products.html"> All Products </a> </button>
+
+                        <button class="collapsible"> <a href="products-mountainbikes.html">Mountain Bikes </a></button>
+                        <div class="content">
+                            <a href="products-mountainbikes-hardtail.html"><button class="fil-p">- Hardtail</button></a>
+                                <a href="products-mountainbikes-fullsus.html"><button class="fil-p">- Full Suspension</button></a>
+                        </div>
+
+                        <button class="fil-p"><a href="products-roadbikes.html">Road Bikes </a></button>
+
+                        <button class="collapsible"><a href="products-bikeparts.html">Bike Parts </a></button>
+                        <div class="content">
+                           <a href="products-bikeparts-groupset.html"> <button class="fil-p">- Groupset</button> </a>
+                           <a href="products-bikeparts-wheelset.html">  <button class="fil-p">- Wheelset </button> </a>
+                           <a href="products-bikeparts-forks.html"> <button class="fil-p">- Suspension Forks </button> </a>
+                           <a href="products-bikeparts-pedals.html"> <button class="fil-p">- Pedals</button> </a>
+                           <a href="products-bikeparts-otherparts.html"> <button class="fil-p">- Other Parts </button> </a> 
+                        </div>
+
+                        <button style="margin-bottom: 20px;" class="collapsible"> <a href="products-bikeaccessories.html">Bike Accessories </a></button>
+                        <div class="content">
+                           <a href="products-bikeaccessories-cyclocomputer.html"> <button class="fil-p">- Cyclocomputers </button> </a>
+                           <a href="products-bikeaccessories-helmet.html"> <button class="fil-p">- Helmets </button> </a>
+                           <a href="products-bikeaccessories-grips&tapes.html"> <button class="fil-p">- Handle Grips & Grip Tapes </button> </a>
+                           <a href="products-bikeaccessories-lights.html"> <button class="fil-p">- Head Lights & Tail Lights </button> </a>
+                           <a href="products-bikeaccessories-bags.html"> <button class="fil-p">- Bags </button> </a>
+                           <a href=""> <button style="margin-bottom: 50px;" class="fil-p">- Water Bottle </button> </a>
+                        </div>
+                    
+                    </div>
+                        
+                </div>
+            </div>
+            <div class="contant">
+                <div class="heading">
+                    <p> Bike Parts </p>
+                </div>
+                <div id="root"></div>
+            </div>
+        </div>
+
+        
+        <section class="shop container">
+
+            <h2 style="margin: 40px 0 40px;">PEDALS</h2>
+            
+
+            <div class="shop-content">
+
+                   <!-- Item 1 -->
+             <div class="item-filter">
+                <div class="product-box">
+                    <div class="product-img-cont">
+                        <img src="SHIMANO-PD-R9100-CLEATS.jpeg" alt="" class="product-img">
+                    </div>
+                    <h2 class="product-title">SHIMANO PD-R9100 DURA-ACE SPD-SL (RB)</h2>
+                    <p class="price">₱12,709.51</p>
+                    <a class="add-cart"></i>ADD TO CART</a>
+                </div>
+            </div>
+
+                <!-- Item 2 -->
+             <div class="item-filter">
+                <div class="product-box">
+                    <div class="product-img-cont">
+                        <img src="SHIMANO-PD-RS500-CLEATS.jpeg" alt="" class="product-img">
+                    </div>
+                    <h2 class="product-title">SHIMANO PD-RS500 CLEATS PEDAL (RB)</h2>
+                    <p class="price">₱3,341.82</p>
+                    <a class="add-cart"></i>ADD TO CART</a>
+                </div>
+            </div>
+
+                <!-- Item 3 -->
+             <div class="item-filter">
+                <div class="product-box">
+                    <div class="product-img-cont">
+                        <img src="SHIMANO-PD-GR400-FLATPEDS.jpeg" alt="" class="product-img">
+                    </div>
+                    <h2 class="product-title">SHIMANO PD-GR400 FLAT PEDAL (MTB)</h2>
+                    <p class="price">₱3,065.89</p>
+                    <a class="add-cart"></i>ADD TO CART</a>
+                </div>
+            </div>
+
+                  <!-- Item 4 -->
+             <div class="item-filter">
+                <div class="product-box">
+                    <div class="product-img-cont">
+                        <img src="SHIMANO-PD-M9100-CLEATS.jpeg" alt="" class="product-img">
+                    </div>
+                    <h2 class="product-title">SHIMANO PD-M9100 XTR CLEATS PEDAL</h2>
+                    <p class="price">₱8,584.49</p>
+                    <a class="add-cart"></i>ADD TO CART</a>
+                </div>
+            </div>
+
+                
+            
+            </div>
+
+        </section>
+
+
+    </div>
+
+     <footer> 
+        <div class="row">
+            <div class="col">
+                <img src="jnc-logo.png" alt="" class="foot-logo">
+                <p>JnC Bikeshope is a premier bike shop specializing in the sale of bicycles from various well-known brands, as well as a wide range of bike parts and accessories. Located in Silang, Cavite, our shop caters to biking enthusiasts of all levels, from beginners to seasoned riders.</p>
+            </div>
+            
+            <div class="col">
+                <h3>SHOP</h3>
+                <p>ABB Bldg. 2F</p>
+                <p>7XHV+QG5, Silang, Cavite</p>
+                <p>Philippines</p>
+                <p class="email-id">JnCbikeshop@gmail.com</p>
+                <h4>+63 - 9447557385</h4> 
+                </div>
+
+                <div class="col">
+                    <h3>PRODUCTS</h3>
+                    <ul>
+                        <li><a href="products-mountainbikes.html">Mountain Bikes</a></li>
+                        <li><a href="products-roadbikes.html">Road Bikes</a></li>
+                        <li><a href="products-bikeparts.html">Bike Parts</a></li>
+                        <li><a href="products-bikeaccessories.html">Bike Accessories</a></li>
+                    </ul>
+                </div>
+
+            <div class="col">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="aboutus.html" class="abtfoot">About Us</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+        <hr>
+        <p class="copyright"> JnC Bikeshope © 2023 - All Rights Reserved</p>
+    </footer>
+
+     <script src="javascript.js"></script>
+
+     <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
+        
+   
+    
+</body>
+
+</html>

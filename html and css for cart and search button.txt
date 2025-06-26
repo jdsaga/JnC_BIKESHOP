@@ -1,0 +1,71 @@
+search and cart button html
+   <div class="side-buttons">
+
+            <div class="searchbar-cont">
+                <div class="searchbar-icon">
+                    <i class ="search fa fa-search"></i>
+                </div>
+            </div>
+
+            <div class="cart-container">
+                <div class="cart-icon">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                </div>
+            </div>
+
+            <div>
+                <input type="checkbox"
+            class="checkbox" id="checkbox">
+                <label for="checkbox" class="label">
+                    <i class="fas fa-moon"> </i>
+                    <i class="fas fa-sun"></i>
+                    <div class="ball"></div>
+                </label>
+             </div>
+            </div>
+
+css for it to be in one line 
+.side-buttons{
+    display:flex;
+}
+
+css for dark mode
+
+body.dark .fa-shopping-cart {
+    color:white;
+}
+
+body.dark .fa-search {
+    color:white;
+}
+
+css for hover
+
+.fa-shopping-cart:hover {
+    color: #ff2c2c;
+}
+
+.fa-search:hover {
+    color: #ff2c2c;
+}
+
+css for design
+
+.searchbar-cont{
+    padding-right: 20px;
+}
+
+.cart-container {
+    padding-right: 20px;
+}
+
+.fa-shopping-cart {
+    cursor:pointer;
+    color:#292c35;
+}
+
+.fa-search {
+    cursor:pointer;
+    color:#292c35;
+}
+
